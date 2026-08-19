@@ -1,0 +1,50 @@
+{% extends 'library/base.html' %}
+
+{% block title %}
+    Pedir libro - Digital Library
+{% endblock %}
+
+{% block content %}
+
+<section class="form-page">
+
+    <div class="form-card">
+
+        <header class="page-header">
+
+            <h1>
+                Pedir libro
+            </h1>
+
+            <p>
+                {{ book.title }}
+            </p>
+
+        </header>
+
+
+        <form method="post" class="library-form">
+
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            <div class="form-actions">
+
+                <button type="submit">
+                    Confirmar préstamo
+                </button>
+
+                <a href="{% url 'book_detail' book.id %}">
+                    Cancelar
+                </a>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</section>
+
+{% endblock %}

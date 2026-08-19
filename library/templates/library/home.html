@@ -1,0 +1,164 @@
+{% extends 'library/base.html' %}
+
+
+{% block title %}
+    Inicio - Digital Library
+{% endblock %}
+
+
+{% block content %}
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>
+            Encuentra tu próximo libro
+        </h1>
+
+        <p class="hero-description">
+            Explora nuestra colección de libros, descubre nuevos autores
+            y gestiona tus préstamos desde un mismo lugar.
+        </p>
+
+
+        <div class="hero-actions">
+
+            <a
+                href="{% url 'book_list' %}"
+                class="button button-secondary"
+            >
+                Libros
+            </a>
+
+            <a
+                href="{% url 'author_list' %}"
+                class="button button-secondary"
+            >
+                Autores
+            </a>
+
+            {% if user.is_authenticated %}
+
+                <a
+                    href="{% url 'my_loans' %}"
+                    class="button button-secondary"
+                >
+                    Préstamos
+                </a>
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="home-section">
+
+    <header class="section-header">
+
+        <h2>
+            ¿Qué puedes hacer?
+        </h2>
+
+    </header>
+
+
+    <div class="features-grid">
+
+        <article class="feature-card">
+
+            <h3>
+                Explorar libros
+            </h3>
+
+            <p>
+                Busca libros por título, ISBN o autor y descubre
+                nuestra colección.
+            </p>
+
+            <a href="{% url 'book_list' %}">
+                Ver libros →
+            </a>
+
+        </article>
+
+
+        <article class="feature-card">
+
+            <h3>
+                Descubrir autores
+            </h3>
+
+            <p>
+                Conoce a los autores de nuestra biblioteca y
+                consulta sus obras.
+            </p>
+
+            <a href="{% url 'author_list' %}">
+                Ver autores →
+            </a>
+
+        </article>
+
+
+        <article class="feature-card">
+
+            <h3>
+                Gestionar préstamos
+            </h3>
+
+            <p>
+                Si tienes una cuenta, puedes pedir libros prestados
+                y consultar tu historial.
+            </p>
+
+            {% if user.is_authenticated %}
+
+                <a href="{% url 'my_loans' %}">
+                    Mis préstamos →
+                </a>
+
+            {% else %}
+
+                <a href="{% url 'login' %}">
+                    Iniciar sesión →
+                </a>
+
+            {% endif %}
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<section class="home-section home-call-to-action">
+
+    <div>
+
+        <h2>
+            ¿Ya sabes qué quieres leer?
+        </h2>
+
+        <p>
+            Explora nuestra colección y encuentra tu próximo libro.
+        </p>
+
+    </div>
+
+
+    <a
+        href="{% url 'book_list' %}"
+        class="button"
+    >
+        Explorar biblioteca
+    </a>
+
+</section>
+
+{% endblock %}

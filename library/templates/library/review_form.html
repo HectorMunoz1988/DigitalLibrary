@@ -1,0 +1,51 @@
+{% extends 'library/base.html' %}
+
+{% block title %}
+    Valorar {{ book.title }} - Digital Library
+{% endblock %}
+
+{% block content %}
+
+<section class="form-page">
+
+    <div class="form-card">
+
+        <header class="page-header">
+
+            <h1>
+                Escribir una reseña
+            </h1>
+
+            <p>
+                {{ book.title }}
+            </p>
+
+        </header>
+
+
+        <form method="post" class="library-form">
+
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+
+            <div class="form-actions">
+
+                <button type="submit">
+                    Publicar reseña
+                </button>
+
+                <a href="{% url 'book_detail' book.id %}">
+                    Cancelar
+                </a>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</section>
+
+{% endblock %}

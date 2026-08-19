@@ -1,0 +1,145 @@
+{% extends 'library/base.html' %}
+
+
+{% block title %}
+    Libros - Digital Library
+{% endblock %}
+
+
+{% block content %}
+
+<section class="page-header">
+
+    {% if query %}
+
+        <h1>
+            Resultados para "{{ query }}"
+        </h1>
+
+    {% else %}
+
+        <h1>
+            Libros
+        </h1>
+
+    {% endif %}
+
+</section>
+
+
+<section class="search-section">
+
+    <form method="get" class="search-form">
+
+        <label for="search">
+            Buscar libros
+        </label>
+
+        <input
+            type="text"
+            id="search"
+            name="q"
+            placeholder="Título, ISBN o autor..."
+            value="{{ query }}"
+        >
+
+        <button type="submit">
+            Buscar
+        </button>
+
+    </form>
+
+</section>
+
+
+<section class="books-list">
+
+    {% for book in books %}
+
+        <a
+            href="{% url 'book_detail' book.id %}"
+            class="book-card"
+        >
+
+            <div class="book-card-content">
+
+                <h2>
+                    {{ book.title }}
+                </h2>
+
+
+                <p class="book-authors">
+
+                    <strong>Autor:</strong>
+
+                    {% for author in book.author.all %}
+
+                        {{ author.first_name }}
+                        {{ author.last_name }}
+
+                        {% if not forloop.last %}
+                            ,
+                        {% endif %}
+
+                    {% endfor %}
+
+                </p>
+
+
+                <p>
+                    <strong>ISBN:</strong>
+                    {{ book.isbn }}
+                </p>
+
+
+                <p>
+                    <strong>Publicación:</strong>
+                    {{ book.publication_date }}
+                </p>
+
+
+                {% if book.available %}
+
+                    <span class="availability available">
+                        Disponible
+                    </span>
+
+                {% else %}
+
+                    <span class="availability unavailable">
+                        No disponible
+                    </span>
+
+                {% endif %}
+
+            </div>
+
+        </a>
+
+
+    {% empty %}
+
+        <div class="empty-state">
+
+            {% if query %}
+
+                <p>
+                    No se encontraron libros para
+                    "{{ query }}".
+                </p>
+
+            {% else %}
+
+                <p>
+                    No hay libros disponibles.
+                </p>
+
+            {% endif %}
+
+        </div>
+
+    {% endfor %}
+
+</section>
+
+{% endblock %}

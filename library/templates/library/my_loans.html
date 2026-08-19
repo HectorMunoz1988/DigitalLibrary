@@ -1,0 +1,190 @@
+{% extends 'library/base.html' %}
+
+
+{% block title %}
+    Mis préstamos - Digital Library
+{% endblock %}
+
+
+{% block content %}
+
+<section class="loans-page">
+
+    <header class="page-header">
+
+        <h1>
+            Mis préstamos
+        </h1>
+
+        <p>
+            Consulta tus préstamos actuales y tu historial.
+        </p>
+
+    </header>
+
+
+    <section class="active-loans">
+
+        <h2>
+            Préstamos activos
+        </h2>
+
+
+        {% for loan in active_loans %}
+
+            <article class="loan-card">
+
+                <a
+                    href="{% url 'book_detail' loan.book.id %}"
+                    class="loan-card-content"
+                >
+
+                    <h3>
+                        {{ loan.book.title }}
+                    </h3>
+
+
+                    <p>
+
+                        <strong>Fecha del préstamo:</strong>
+
+                        {{ loan.loan_date }}
+
+                    </p>
+
+
+                    <p>
+
+                        <strong>Fecha límite:</strong>
+
+                        {{ loan.due_date }}
+
+                    </p>
+
+
+                    <p>
+
+                        <strong>Estado:</strong>
+
+                        <span class="loan-status active">
+                            Activo
+                        </span>
+
+                    </p>
+
+                </a>
+
+
+                <div class="loan-card-actions">
+
+                    <form
+                        method="post"
+                        action="{% url 'return_book' loan.id %}"
+                    >
+
+                        {% csrf_token %}
+
+                        <button type="submit">
+                            Devolver libro
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </article>
+
+        {% empty %}
+
+            <div class="empty-state">
+
+                <p>
+                    No tienes préstamos activos.
+                </p>
+
+                <a href="{% url 'book_list' %}">
+                    Explorar libros
+                </a>
+
+            </div>
+
+        {% endfor %}
+
+    </section>
+
+
+    <section class="loan-history">
+
+        <h2>
+            Historial de préstamos
+        </h2>
+
+
+        {% for loan in returned_loans %}
+
+            <article class="loan-card loan-card-returned">
+
+                <a
+                    href="{% url 'book_detail' loan.book.id %}"
+                    class="loan-card-content"
+                >
+
+                    <h3>
+                        {{ loan.book.title }}
+                    </h3>
+
+
+                    <p>
+
+                        <strong>Fecha del préstamo:</strong>
+
+                        {{ loan.loan_date }}
+
+                    </p>
+
+
+                    <p>
+
+                        <strong>Fecha límite:</strong>
+
+                        {{ loan.due_date }}
+
+                    </p>
+
+
+                    <p>
+
+                        <strong>Fecha de devolución:</strong>
+
+                        {{ loan.return_date }}
+
+                    </p>
+
+
+                    <p>
+
+                        <strong>Estado:</strong>
+
+                        <span class="loan-status returned">
+                            Devuelto
+                        </span>
+
+                    </p>
+
+                </a>
+
+            </article>
+
+        {% empty %}
+
+            <p>
+                Todavía no tienes préstamos anteriores.
+            </p>
+
+        {% endfor %}
+
+    </section>
+
+</section>
+
+{% endblock %}
