@@ -1,0 +1,524 @@
+[
+{
+  "model": "library.author",
+  "pk": 1,
+  "fields": {
+    "first_name": "John Ronald Reuel",
+    "last_name": "Tolkien",
+    "birth_date": "1892-01-03",
+    "biography": "Escritor, poeta, filólogo, lingüista y profesor universitario británico, nacido en el Estado Libre de Orange (hoy parte de Sudáfrica). Es conocido principalmente por ser el autor de El hobbit y El Señor de los Anillos."
+  }
+},
+{
+  "model": "library.author",
+  "pk": 2,
+  "fields": {
+    "first_name": "Joanne",
+    "last_name": "Rowling",
+    "birth_date": "1965-07-31",
+    "biography": "Escritora, productora de cine y guionista británica, conocida por ser la autora de la serie de libros Harry Potter, que han superado los quinientos millones de ejemplares vendidos"
+  }
+},
+{
+  "model": "library.author",
+  "pk": 3,
+  "fields": {
+    "first_name": "George Raymond Richard",
+    "last_name": "Martin",
+    "birth_date": "1948-09-20",
+    "biography": "Escritor y guionista estadounidense de literatura fantástica, ciencia ficción y terror. Es conocido por ser el autor de la serie de novelas Canción de hielo y fuego, adaptada para la televisión con el título de Juego de tronos (Game of Thrones). Igualmente, la serie de televisión La casa del dragón (House of the Dragon) es una adaptación de su novela Fuego y Sangre. También ha colaborado en la construcción del mundo del videojuego de FromSoftware Elden Ring"
+  }
+},
+{
+  "model": "library.author",
+  "pk": 4,
+  "fields": {
+    "first_name": "Clive Staples",
+    "last_name": "Lewis",
+    "birth_date": "1898-11-29",
+    "biography": "Apologista cristiano anglicano, medievalista, y escritor británico, reconocido por sus obras de ficción, especialmente por su saga Las crónicas de Narnia. También fue crítico literario, académico de la universidad de Oxford en el Magdalen College y locutor de radio norirlandés. Lewis escribió novelas como Cartas del diablo a su sobrino y la Trilogía cósmica con temáticas apologéticas cristianas, y ensayos apologéticos (mayormente en forma de libro) como Mero Cristianismo, Los milagros y El problema del dolor, entre otros."
+  }
+},
+{
+  "model": "library.author",
+  "pk": 5,
+  "fields": {
+    "first_name": "Stephen Edwin",
+    "last_name": "King",
+    "birth_date": "1947-09-21",
+    "biography": "Escritor estadounidense de novelas de terror, ficción sobrenatural, misterio, ciencia ficción y literatura fantástica. Sus libros han vendido más de 500 millones de ejemplares,[1]y en su mayoría han sido adaptados al cine y a la televisión. Ha publicado 66 novelas, doce colecciones de relatos y novelas cortas, y siete libros de no ficción, además de un guion cinematográfico, entre otras obras."
+  }
+},
+{
+  "model": "library.author",
+  "pk": 6,
+  "fields": {
+    "first_name": "Arthur Ignatius Conan",
+    "last_name": "Doyle",
+    "birth_date": "1859-05-22",
+    "biography": "Escritor y médico británico de ascendencia irlandesa, creador del célebre detective de ficción Sherlock Holmes. Fue un autor prolífico cuya obra incluye relatos de ciencia ficción, novela histórica, teatro y poesía."
+  }
+},
+{
+  "model": "library.author",
+  "pk": 7,
+  "fields": {
+    "first_name": "Jules Gabriel",
+    "last_name": "Verne",
+    "birth_date": "1828-02-08",
+    "biography": "Escritor, dramaturgo y poeta francés, célebre por sus novelas de aventuras y por su profunda influencia en el género literario de la ciencia ficción. Sus novelas, siempre bien documentadas, están generalmente ambientadas en la segunda mitad del siglo XIX, teniendo en cuenta los avances tecnológicos de la época."
+  }
+},
+{
+  "model": "library.author",
+  "pk": 8,
+  "fields": {
+    "first_name": "Herbert George",
+    "last_name": "Wells",
+    "birth_date": "1866-09-21",
+    "biography": "Escritor, novelista, periodista, sociólogo e historiador británico. Wells fue un autor prolífico que escribió en diversos géneros, como la ciencia ficción y la comedia, así como obras de no ficción. Escribió docenas de novelas, relatos cortos, obras de crítica social, sátiras, biografías y autobiografías. Es recordado principalmente por sus novelas de ciencia ficción y es frecuentemente citado como el «padre de la ciencia ficción» junto con Julio Verne y Hugo Gernsback."
+  }
+},
+{
+  "model": "library.book",
+  "pk": 1,
+  "fields": {
+    "title": "El Hobbit",
+    "isbn": "9780044403371",
+    "publication_date": "1937-09-21",
+    "available": true,
+    "author": [
+      1
+    ]
+  }
+},
+{
+  "model": "library.book",
+  "pk": 2,
+  "fields": {
+    "title": "El Señor de los Anillos",
+    "isbn": "9788845292613",
+    "publication_date": "1954-07-29",
+    "available": true,
+    "author": [
+      1
+    ]
+  }
+},
+{
+  "model": "library.book",
+  "pk": 3,
+  "fields": {
+    "title": "El Silmarillion",
+    "isbn": "9780618126989",
+    "publication_date": "1977-09-15",
+    "available": true,
+    "author": [
+      1
+    ]
+  }
+},
+{
+  "model": "library.book",
+  "pk": 4,
+  "fields": {
+    "title": "Harry Potter y la piedra filosofal",
+    "isbn": "9788831020787",
+    "publication_date": "1997-06-26",
+    "available": true,
+    "author": [
+      2
+    ]
+  }
+},
+{
+  "model": "library.book",
+  "pk": 5,
+  "fields": {
+    "title": "Harry Potter y la cámara secreta",
+    "isbn": "9788831000154",
+    "publication_date": "1998-07-02",
+    "available": true,
+    "author": [
+      2
+    ]
+  }
+},
+{
+  "model": "library.book",
+  "pk": 6,
+  "fields": {
+    "title": "Harry Potter y el prisionero de Azkaban",
+    "isbn": "9788478884958",
+    "publication_date": "1999-07-08",
+    "available": true,
+    "author": [
+      2
+    ]
+  }
+},
+{
+  "model": "library.book",
+  "pk": 7,
+  "fields": {
+    "title": "Harry Potter y el cáliz de fuego",
+    "isbn": "9788478886457",
+    "publication_date": "2000-07-08",
+    "available": true,
+    "author": [
+      2
+    ]
+  }
+},
+{
+  "model": "library.book",
+  "pk": 8,
+  "fields": {
+    "title": "Harry Potter y la Orden del Fénix",
+    "isbn": "9788478887423",
+    "publication_date": "2003-06-21",
+    "available": true,
+    "author": [
+      2
+    ]
+  }
+},
+{
+  "model": "library.book",
+  "pk": 9,
+  "fields": {
+    "title": "Harry Potter y el misterio del príncipe",
+    "isbn": "9788478889908",
+    "publication_date": "2005-07-16",
+    "available": true,
+    "author": [
+      2
+    ]
+  }
+},
+{
+  "model": "library.book",
+  "pk": 10,
+  "fields": {
+    "title": "Harry Potter y las reliquias de la Muerte",
+    "isbn": "9788478889830",
+    "publication_date": "2007-07-21",
+    "available": true,
+    "author": [
+      2
+    ]
+  }
+},
+{
+  "model": "library.book",
+  "pk": 11,
+  "fields": {
+    "title": "Juego de tronos",
+    "isbn": "9788496208208",
+    "publication_date": "1996-08-01",
+    "available": true,
+    "author": [
+      3
+    ]
+  }
+},
+{
+  "model": "library.book",
+  "pk": 12,
+  "fields": {
+    "title": "Choque de reyes",
+    "isbn": "9788496208284",
+    "publication_date": "1998-11-16",
+    "available": true,
+    "author": [
+      3
+    ]
+  }
+},
+{
+  "model": "library.book",
+  "pk": 13,
+  "fields": {
+    "title": "Tormenta de espadas",
+    "isbn": "9788496208575",
+    "publication_date": "2000-08-08",
+    "available": true,
+    "author": [
+      3
+    ]
+  }
+},
+{
+  "model": "library.book",
+  "pk": 14,
+  "fields": {
+    "title": "Festín de cuervos",
+    "isbn": "9788496208759",
+    "publication_date": "2005-10-17",
+    "available": true,
+    "author": [
+      3
+    ]
+  }
+},
+{
+  "model": "library.book",
+  "pk": 15,
+  "fields": {
+    "title": "Danza de dragones",
+    "isbn": "9788496208957",
+    "publication_date": "2011-07-12",
+    "available": true,
+    "author": [
+      3
+    ]
+  }
+},
+{
+  "model": "library.book",
+  "pk": 16,
+  "fields": {
+    "title": "El león, la bruja y el armario",
+    "isbn": "9788427200251",
+    "publication_date": "1950-10-16",
+    "available": true,
+    "author": [
+      4
+    ]
+  }
+},
+{
+  "model": "library.book",
+  "pk": 17,
+  "fields": {
+    "title": "El príncipe Caspian",
+    "isbn": "9788427200268",
+    "publication_date": "1951-10-15",
+    "available": true,
+    "author": [
+      4
+    ]
+  }
+},
+{
+  "model": "library.book",
+  "pk": 18,
+  "fields": {
+    "title": "La travesía del Viajero del Alba",
+    "isbn": "9788427200275",
+    "publication_date": "1952-09-07",
+    "available": true,
+    "author": [
+      4
+    ]
+  }
+},
+{
+  "model": "library.book",
+  "pk": 19,
+  "fields": {
+    "title": "La silla de plata",
+    "isbn": "9788427200282",
+    "publication_date": "1953-09-07",
+    "available": true,
+    "author": [
+      4
+    ]
+  }
+},
+{
+  "model": "library.book",
+  "pk": 20,
+  "fields": {
+    "title": "El resplandor",
+    "isbn": "9788497593792",
+    "publication_date": "1977-01-28",
+    "available": true,
+    "author": [
+      5
+    ]
+  }
+},
+{
+  "model": "library.book",
+  "pk": 21,
+  "fields": {
+    "title": "It",
+    "isbn": "9788497593808",
+    "publication_date": "1986-09-15",
+    "available": true,
+    "author": [
+      5
+    ]
+  }
+},
+{
+  "model": "library.book",
+  "pk": 22,
+  "fields": {
+    "title": "Cementerio de animales",
+    "isbn": "9788497593822",
+    "publication_date": "1983-11-14",
+    "available": true,
+    "author": [
+      5
+    ]
+  }
+},
+{
+  "model": "library.book",
+  "pk": 23,
+  "fields": {
+    "title": "Estudio en escarlata",
+    "isbn": "9788491050292",
+    "publication_date": "1887-11-01",
+    "available": true,
+    "author": [
+      6
+    ]
+  }
+},
+{
+  "model": "library.book",
+  "pk": 24,
+  "fields": {
+    "title": "El signo de los cuatro",
+    "isbn": "9788491050308",
+    "publication_date": "1890-02-01",
+    "available": true,
+    "author": [
+      6
+    ]
+  }
+},
+{
+  "model": "library.book",
+  "pk": 25,
+  "fields": {
+    "title": "Las aventuras de Sherlock Holmes",
+    "isbn": "9788491050315",
+    "publication_date": "1892-10-14",
+    "available": true,
+    "author": [
+      6
+    ]
+  }
+},
+{
+  "model": "library.book",
+  "pk": 26,
+  "fields": {
+    "title": "El sabueso de los Baskerville",
+    "isbn": "9788491050322",
+    "publication_date": "1902-08-25",
+    "available": true,
+    "author": [
+      6
+    ]
+  }
+},
+{
+  "model": "library.book",
+  "pk": 27,
+  "fields": {
+    "title": "Viaje al centro de la Tierra",
+    "isbn": "9788427210168",
+    "publication_date": "1864-11-25",
+    "available": true,
+    "author": [
+      7
+    ]
+  }
+},
+{
+  "model": "library.book",
+  "pk": 28,
+  "fields": {
+    "title": "Veinte mil leguas de viaje submarino",
+    "isbn": "9788427210175",
+    "publication_date": "1870-06-20",
+    "available": true,
+    "author": [
+      7
+    ]
+  }
+},
+{
+  "model": "library.book",
+  "pk": 29,
+  "fields": {
+    "title": "La vuelta al mundo en ochenta días",
+    "isbn": "9788427210182",
+    "publication_date": "1872-01-30",
+    "available": true,
+    "author": [
+      7
+    ]
+  }
+},
+{
+  "model": "library.book",
+  "pk": 30,
+  "fields": {
+    "title": "De la Tierra a la Luna",
+    "isbn": "9788427210199",
+    "publication_date": "1865-11-14",
+    "available": true,
+    "author": [
+      7
+    ]
+  }
+},
+{
+  "model": "library.book",
+  "pk": 31,
+  "fields": {
+    "title": "La máquina del tiempo",
+    "isbn": "9788491050339",
+    "publication_date": "1895-01-29",
+    "available": true,
+    "author": [
+      8
+    ]
+  }
+},
+{
+  "model": "library.book",
+  "pk": 32,
+  "fields": {
+    "title": "La guerra de los mundos",
+    "isbn": "9788491050346",
+    "publication_date": "1898-01-01",
+    "available": true,
+    "author": [
+      8
+    ]
+  }
+},
+{
+  "model": "library.book",
+  "pk": 33,
+  "fields": {
+    "title": "El hombre invisible",
+    "isbn": "9788491050353",
+    "publication_date": "1897-01-01",
+    "available": true,
+    "author": [
+      8
+    ]
+  }
+},
+{
+  "model": "library.book",
+  "pk": 34,
+  "fields": {
+    "title": "La isla del doctor Moreau",
+    "isbn": "9788491050360",
+    "publication_date": "1896-01-01",
+    "available": true,
+    "author": [
+      8
+    ]
+  }
+}
+]
