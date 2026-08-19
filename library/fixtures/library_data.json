@@ -520,5 +520,214 @@
       8
     ]
   }
+},
+{
+  "model": "library.loan",
+  "pk": 1,
+  "fields": {
+    "user": 1,
+    "book": 1,
+    "loan_date": "2026-08-03",
+    "due_date": "2026-08-04",
+    "return_date": "2026-08-03"
+  }
+},
+{
+  "model": "library.loan",
+  "pk": 2,
+  "fields": {
+    "user": 1,
+    "book": 1,
+    "loan_date": "2026-08-03",
+    "due_date": "2026-08-04",
+    "return_date": "2026-08-03"
+  }
+},
+{
+  "model": "library.loan",
+  "pk": 3,
+  "fields": {
+    "user": 1,
+    "book": 1,
+    "loan_date": "2026-08-03",
+    "due_date": "2026-08-04",
+    "return_date": "2026-08-03"
+  }
+},
+{
+  "model": "library.loan",
+  "pk": 4,
+  "fields": {
+    "user": 1,
+    "book": 2,
+    "loan_date": "2026-08-04",
+    "due_date": "2026-08-05",
+    "return_date": "2026-08-04"
+  }
+},
+{
+  "model": "library.loan",
+  "pk": 5,
+  "fields": {
+    "user": 1,
+    "book": 18,
+    "loan_date": "2026-08-05",
+    "due_date": "2026-08-06",
+    "return_date": "2026-08-05"
+  }
+},
+{
+  "model": "library.loan",
+  "pk": 6,
+  "fields": {
+    "user": 2,
+    "book": 14,
+    "loan_date": "2026-08-05",
+    "due_date": "2026-08-06",
+    "return_date": "2026-08-05"
+  }
+},
+{
+  "model": "library.loan",
+  "pk": 7,
+  "fields": {
+    "user": 2,
+    "book": 4,
+    "loan_date": "2026-08-18",
+    "due_date": "2026-08-19",
+    "return_date": "2026-08-18"
+  }
+},
+{
+  "model": "library.loan",
+  "pk": 8,
+  "fields": {
+    "user": 1,
+    "book": 12,
+    "loan_date": "2026-08-18",
+    "due_date": "2026-08-19",
+    "return_date": "2026-08-18"
+  }
+},
+{
+  "model": "library.loan",
+  "pk": 9,
+  "fields": {
+    "user": 2,
+    "book": 13,
+    "loan_date": "2026-08-18",
+    "due_date": "2026-08-19",
+    "return_date": "2026-08-18"
+  }
+},
+{
+  "model": "library.loan",
+  "pk": 10,
+  "fields": {
+    "user": 1,
+    "book": 20,
+    "loan_date": "2026-08-19",
+    "due_date": "2026-09-10",
+    "return_date": null
+  }
+},
+{
+  "model": "library.review",
+  "pk": 1,
+  "fields": {
+    "book": 1,
+    "user": 1,
+    "rating": 5,
+    "comment": "Muy buen libro, recomendadisimo",
+    "created_at": "2026-08-11T15:34:58.431Z"
+  }
+},
+{
+  "model": "library.review",
+  "pk": 2,
+  "fields": {
+    "book": 2,
+    "user": 1,
+    "rating": 5,
+    "comment": "Un clasico",
+    "created_at": "2026-08-13T21:31:05.064Z"
+  }
+},
+{
+  "model": "library.review",
+  "pk": 3,
+  "fields": {
+    "book": 2,
+    "user": 2,
+    "rating": 4,
+    "comment": "Muy buen libro",
+    "created_at": "2026-08-17T00:10:36.450Z"
+  }
+},
+{
+  "model": "library.review",
+  "pk": 4,
+  "fields": {
+    "book": 4,
+    "user": 2,
+    "rating": 5,
+    "comment": "Buen libro",
+    "created_at": "2026-08-18T02:02:44.184Z"
+  }
+},
+{
+  "model": "library.review",
+  "pk": 5,
+  "fields": {
+    "book": 12,
+    "user": 1,
+    "rating": 5,
+    "comment": "Libro entretenido y fácil de leer",
+    "created_at": "2026-08-18T12:18:59.506Z"
+  }
+},
+{
+  "model": "library.review",
+  "pk": 6,
+  "fields": {
+    "book": 13,
+    "user": 2,
+    "rating": 5,
+    "comment": "Reseña",
+    "created_at": "2026-08-18T13:41:57.944Z"
+  }
+},
+{
+  "model": "library.review",
+  "pk": 7,
+  "fields": {
+    "book": 4,
+    "user": 1,
+    "rating": 5,
+    "comment": "Una historia fantástica y muy entretenida.",
+    "created_at": "2026-08-19T12:04:15.704Z"
+  }
+},
+{
+  "model": "library.review",
+  "pk": 8,
+  "fields": {
+    "book": 11,
+    "user": 1,
+    "rating": 4,
+    "comment": "Una novela con una historia muy interesante y personajes memorables.",
+    "created_at": "2026-08-19T12:04:21.297Z"
+  }
+},
+{
+  "model": "library.review",
+  "pk": 9,
+  "fields": {
+    "book": 20,
+    "user": 1,
+    "rating": 5,
+    "comment": "Una novela de terror muy intensa y atmosférica.",
+    "created_at": "2026-08-19T12:04:26.449Z"
+  }
 }
 ]
